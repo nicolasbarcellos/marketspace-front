@@ -1,9 +1,10 @@
 import React from 'react'
-import { VStack } from 'native-base'
+import { Center, VStack, Text } from 'native-base'
 
 import Logo from '@assets/logo2x.svg'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import HeaderAuthRoutes from '@components/HeaderAuthRoutes'
+import Input from '@components/Input'
 
 const SignIn = () => {
   return (
@@ -14,6 +15,18 @@ const SignIn = () => {
           title="marketspace"
           subtitle="Seu espaço de compra e venda"
         />
+        <VStack
+          px={12}
+          space={4}
+          justifyContent={'center'}
+          alignItems={'center'}
+        >
+          <Text color={'gray.200'} fontSize={'sm'}>
+            Acesse sua conta
+          </Text>
+          <Input placeholder="Email" />
+          <Input placeholder="Senha" />
+        </VStack>
       </VStack>
     </SafeAreaView>
   )

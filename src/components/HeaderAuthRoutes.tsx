@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { Center, Heading, VStack, Text } from 'native-base'
 
 type Props = {
-  logo: any
+  logo: ReactNode
   title: string
   subtitle: string
 }
@@ -12,8 +12,10 @@ const HeaderAuthRoutes = ({ logo, title, subtitle }: Props) => {
     <VStack>
       <Center>
         {logo}
-        <Heading>{title}</Heading>
-        <Text>{subtitle}</Text>
+        <Heading color={'gray.100'}>{title}</Heading>
+        <Text fontSize={'sm'} color={'gray.300'}>
+          {subtitle}
+        </Text>
       </Center>
     </VStack>
   )
